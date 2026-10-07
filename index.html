@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3f4b2f"><link rel="manifest" href="manifest.json">
+<title>FGC | مدیریت پروژه</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div><b>FGC</b><span>مدیریت پروژه</span></div><button id="install" hidden>نصب برنامه</button></header>
+<main>
+<section class="hero"><div><h1>داشبورد FGC</h1><p>مدیریت گزارش، پروژه، هزینه و مصالح</p></div><div class="date" id="date"></div></section>
+<section class="cards">
+<div class="card"><small>پروژه‌ها</small><strong id="projects">0</strong></div>
+<div class="card"><small>گزارش‌های امروز</small><strong id="reports">0</strong></div>
+<div class="card"><small>هزینه‌ها</small><strong id="costs">0 تومان</strong></div>
+</section>
+<section class="panel">
+<h2>گزارش روزانه</h2>
+<form id="reportForm">
+<input id="project" placeholder="نام پروژه" required>
+<input id="place" placeholder="محل کار">
+<input id="hours" type="number" min="0" step=".5" placeholder="ساعت کار">
+<textarea id="desc" placeholder="توضیحات"></textarea>
+<button>ثبت گزارش</button>
+</form>
+<div id="reportList"></div>
+</section>
+<section class="panel">
+<h2>هزینه / واریزی</h2>
+<form id="moneyForm">
+<select id="type"><option value="cost">هزینه</option><option value="income">واریزی</option></select>
+<input id="amount" type="number" min="0" placeholder="مبلغ (تومان)" required>
+<input id="moneyDesc" placeholder="شرح">
+<button>ثبت</button>
+</form>
+<div id="moneyList"></div>
+</section>
+</main>
+<footer>FGC — Fared Group Company</footer>
+<script src="app.js"></script>
+</body></html>
